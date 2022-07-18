@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "car-sell-1c4bc": {
+      "hosting": {
+        "car-sell": [
+          "car-sell-1c4bc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "car-sell-1c4bc"
+  }
+}
