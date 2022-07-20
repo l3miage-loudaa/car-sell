@@ -39,6 +39,16 @@ export class OffersService {
     })
   }
 
+  getOffersById(offerId:string): Promise<Offer>{
+    return new Promise((resolve,reject) => {
+      this.db.database.ref(`offres/${offerId}`).once('value',(snapshot,err) => {
+        if(err){
+          reject(err)
+        }
+        resolve(snapshot.val())
+      })
+    })
+  }
 dispachOffers(){
   this.offersSubject.next(this.offers)
 }
