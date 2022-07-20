@@ -4,9 +4,10 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: 'admin',loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
-  {path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
+  {path: 'admin',loadChildren:  () => import('./admin/admin.module').then(m => m.AdminModule)},
+  {path: 'auth', loadChildren:  () => import('./auth/auth.module').then(m => m.AuthModule)},
   {path: 'account',loadChildren:() => import('./account/account.module').then(m => m.AccountModule)},
+  {path: 'offers',loadChildren: () => import('./offers/offers.module').then(m => m.OffersModule)  },
   {path: 'home', component : HomeComponent},
   {path: '',redirectTo: 'home', pathMatch: 'full'},
   {path:'**', redirectTo: 'home'}
